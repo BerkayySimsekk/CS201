@@ -1,3 +1,4 @@
+//Berkay Simsek, section 2, 22303338
 #include "PandemicSimulator.h"
 #include "ListQueue.cpp"
 

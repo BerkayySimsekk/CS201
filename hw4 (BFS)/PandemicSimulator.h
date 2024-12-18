@@ -1,3 +1,4 @@
+//Berkay Simsek, section 2, 22303338
 #ifndef PANDEMICSIMULATOR_H
 #define PANDEMICSIMULATOR_H
 

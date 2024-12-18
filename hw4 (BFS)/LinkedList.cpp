@@ -1,4 +1,4 @@
-//Berkay Simsek 22303338
+//Berkay Simsek, section 2, 22303338
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
