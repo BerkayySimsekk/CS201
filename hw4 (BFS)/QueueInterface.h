@@ -8,6 +8,7 @@ public:
     virtual void enqueue( const ItemType& newEntry) = 0;
     virtual void dequeue() = 0;
     virtual ItemType peekFront() const = 0;
+    virtual ~QueueInterface() {}
 };
 
 #endif //QUEUEINTERFACE_H

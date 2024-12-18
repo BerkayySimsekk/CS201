@@ -7,6 +7,7 @@
 PandemicSimulator::PandemicSimulator(const string cityGridFile) {
     dayCounter = 0;
     cityGridFileName = cityGridFile;
+    gridInfo = nullptr;
     readGridInfoFromFile(cityGridFile);
 }
 
@@ -22,6 +23,17 @@ PandemicSimulator::~PandemicSimulator() {
 }
 
 void PandemicSimulator::readGridInfoFromFile(const string cityGridFile) {
+    if(gridInfo != nullptr) {
+        for(int i = 0; i < firstDim; i++) {
+            for(int j = 0; j < secondDim; j++)
+                delete gridInfo[i][j];
+
+            delete gridInfo[i];
+        }
+
+        delete gridInfo;
+    }
+
     ifstream inputFile(cityGridFile);
     char ch;
     int number;
@@ -123,6 +135,8 @@ void PandemicSimulator::simulateBlock(const int row, const int col) {
         }
     }
 
+    delete nextDay;
+
     if(!isFound)
         dayCounter = -1;
 
@@ -190,6 +204,8 @@ void PandemicSimulator::simulatePandemic() {
             }
         }
     }
+
+    delete nextDay;
 
     bool isSpreadAllBlocks = true;
 
@@ -264,6 +280,8 @@ void PandemicSimulator::displayCityState(const int time) {
             }
         }
     }
+
+    delete nextDay;
 
     cout << "City state at day " << time << ":" << endl;
 

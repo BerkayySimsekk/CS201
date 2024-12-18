@@ -24,6 +24,7 @@ ListQueue<ItemType>::ListQueue() {
 
 template<class ItemType>
 ListQueue<ItemType>::~ListQueue() {
+    delete listPtr;
 }
 
 template<class ItemType>
