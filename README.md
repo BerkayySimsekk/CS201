@@ -1,4 +1,4 @@
-# Bilkent University CS 201 Homework Assignments
+# Bilkent University CS 201 Assignments
 
 Repository includes my solutions for the course Fundamental Structures of Computer Science I assignments. The course introduces the fundamentals of the computer programming with C++ programming. The memory leaks are tested with Valgrind for the
 assignments. The code in the assignments are tested by using an automated test suite that includes multiple test cases on a remote server provided by Bilkent University.
